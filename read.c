@@ -1,9 +1,8 @@
 
-int read( int fd, Inode inode, int taille) {
-
-  fd = open( "donnee.txt"  ,O_RDONLY);
+int lecture ( int fd, Inode inode, int taille, char *text) {
 
   lseek( fd , inode, SEEK_SET);
-  fread( inode, taille, DIM,fd);
+   text = read( inode, taille, DIM,fd);
+  return text;
 
 }
