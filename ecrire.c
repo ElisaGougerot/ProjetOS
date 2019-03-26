@@ -1,8 +1,7 @@
-int write(int fd, Inode inode, int taille){
-
-  fd = open("donnee.txt", O_CREAT|O_RDWR, 0666);
+int ecriture(int fd, Inode inode, int taille, char *text){
 
   lseek(fd, inode, SEEK_SET);
-  fwrite(inode,taille,DIM,fd);
+  text = write(inode,taille,DIM,fd);
 
+  return text;
 }
