@@ -1,0 +1,72 @@
+\hypertarget{memory_8c}{}\section{src/prog/memory.c File Reference}
+\label{memory_8c}\index{src/prog/memory.c@{src/prog/memory.c}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{memory_8c_afc6ae06f8c3d93284940cc498ac5bd0e}{write\+\_\+f}} (\mbox{\hyperlink{structint}{int}} fd, \mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}} inode, \mbox{\hyperlink{structint}{int}} size, char $\ast$text)
+\item 
+void \mbox{\hyperlink{memory_8c_a53701b6e1cd485fc7865090d6867cdaa}{read\+\_\+f}} (\mbox{\hyperlink{structint}{int}} fd, \mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}} inode, \mbox{\hyperlink{structint}{int}} size, char $\ast$text)
+\item 
+void \mbox{\hyperlink{memory_8c_a9c249e6d1a3e336bb4e5c9dbf6ae0b75}{clean\+\_\+file}} (\mbox{\hyperlink{structint}{int}} fd, \mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}} inode)
+\item 
+\mbox{\hyperlink{struct_address___list}{Address\+\_\+\+List}} \mbox{\hyperlink{memory_8c_ab668af255f234be09bc7066751165c64}{init\+\_\+\+Address\+\_\+\+List}} ()
+\item 
+void \mbox{\hyperlink{memory_8c_ae4757f9fd28cf3f3e849180a1d4d006b}{affiche\+\_\+address\+\_\+list}} (\mbox{\hyperlink{struct_address___list}{Address\+\_\+\+List}} al)
+\item 
+\mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}} \mbox{\hyperlink{memory_8c_adb5781686ec6819460017da9dc2e2c7f}{find\+\_\+available\+\_\+block}} (\mbox{\hyperlink{structint}{int}} fd, \mbox{\hyperlink{structint}{int}} cursor)
+\item 
+void \mbox{\hyperlink{memory_8c_a26c90d7d6f513fcd550dfea4b264f445}{free\+\_\+block}} (\mbox{\hyperlink{struct_address___list}{Address\+\_\+\+List}} al, \mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}} inode\+\_\+al, \mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}} inode)
+\item 
+void \mbox{\hyperlink{memory_8c_a8df44a896269d0f3f7baa74dc4992ea1}{create\+\_\+file}} (\mbox{\hyperlink{structint}{int}} fd, char $\ast$filename, \mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}} inode, \mbox{\hyperlink{structint}{int}} root, \mbox{\hyperlink{structint}{int}} cursor\+\_\+address\+\_\+table, char file\+\_\+type\mbox{[}1\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{memory_8c_ae4757f9fd28cf3f3e849180a1d4d006b}\label{memory_8c_ae4757f9fd28cf3f3e849180a1d4d006b}} 
+\index{memory.c@{memory.c}!affiche\_address\_list@{affiche\_address\_list}}
+\index{affiche\_address\_list@{affiche\_address\_list}!memory.c@{memory.c}}
+\subsubsection{\texorpdfstring{affiche\_address\_list()}{affiche\_address\_list()}}
+{\footnotesize\ttfamily void affiche\+\_\+address\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_address___list}{Address\+\_\+\+List}}}]{al }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memory_8c_a9c249e6d1a3e336bb4e5c9dbf6ae0b75}\label{memory_8c_a9c249e6d1a3e336bb4e5c9dbf6ae0b75}} 
+\index{memory.c@{memory.c}!clean\_file@{clean\_file}}
+\index{clean\_file@{clean\_file}!memory.c@{memory.c}}
+\subsubsection{\texorpdfstring{clean\_file()}{clean\_file()}}
+{\footnotesize\ttfamily void clean\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structint}{int}}}]{fd,  }\item[{\mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}}}]{inode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memory_8c_a8df44a896269d0f3f7baa74dc4992ea1}\label{memory_8c_a8df44a896269d0f3f7baa74dc4992ea1}} 
+\index{memory.c@{memory.c}!create\_file@{create\_file}}
+\index{create\_file@{create\_file}!memory.c@{memory.c}}
+\subsubsection{\texorpdfstring{create\_file()}{create\_file()}}
+{\footnotesize\ttfamily void create\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structint}{int}}}]{fd,  }\item[{char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}}}]{inode,  }\item[{\mbox{\hyperlink{structint}{int}}}]{root,  }\item[{\mbox{\hyperlink{structint}{int}}}]{cursor\+\_\+address\+\_\+table,  }\item[{char}]{file\+\_\+type\mbox{[}1\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memory_8c_adb5781686ec6819460017da9dc2e2c7f}\label{memory_8c_adb5781686ec6819460017da9dc2e2c7f}} 
+\index{memory.c@{memory.c}!find\_available\_block@{find\_available\_block}}
+\index{find\_available\_block@{find\_available\_block}!memory.c@{memory.c}}
+\subsubsection{\texorpdfstring{find\_available\_block()}{find\_available\_block()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}} \mbox{\hyperlink{structfind__available__block}{find\+\_\+available\+\_\+block}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structint}{int}}}]{fd,  }\item[{\mbox{\hyperlink{structint}{int}}}]{cursor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memory_8c_a26c90d7d6f513fcd550dfea4b264f445}\label{memory_8c_a26c90d7d6f513fcd550dfea4b264f445}} 
+\index{memory.c@{memory.c}!free\_block@{free\_block}}
+\index{free\_block@{free\_block}!memory.c@{memory.c}}
+\subsubsection{\texorpdfstring{free\_block()}{free\_block()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{structfree__block}{free\+\_\+block}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_address___list}{Address\+\_\+\+List}}}]{al,  }\item[{\mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}}}]{inode\+\_\+al,  }\item[{\mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}}}]{inode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memory_8c_ab668af255f234be09bc7066751165c64}\label{memory_8c_ab668af255f234be09bc7066751165c64}} 
+\index{memory.c@{memory.c}!init\_Address\_List@{init\_Address\_List}}
+\index{init\_Address\_List@{init\_Address\_List}!memory.c@{memory.c}}
+\subsubsection{\texorpdfstring{init\_Address\_List()}{init\_Address\_List()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_address___list}{Address\+\_\+\+List}} \mbox{\hyperlink{structinit___address___list}{init\+\_\+\+Address\+\_\+\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memory_8c_a53701b6e1cd485fc7865090d6867cdaa}\label{memory_8c_a53701b6e1cd485fc7865090d6867cdaa}} 
+\index{memory.c@{memory.c}!read\_f@{read\_f}}
+\index{read\_f@{read\_f}!memory.c@{memory.c}}
+\subsubsection{\texorpdfstring{read\_f()}{read\_f()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{structread__f}{read\+\_\+f}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structint}{int}}}]{fd,  }\item[{\mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}}}]{inode,  }\item[{\mbox{\hyperlink{structint}{int}}}]{size,  }\item[{char $\ast$}]{text }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memory_8c_afc6ae06f8c3d93284940cc498ac5bd0e}\label{memory_8c_afc6ae06f8c3d93284940cc498ac5bd0e}} 
+\index{memory.c@{memory.c}!write\_f@{write\_f}}
+\index{write\_f@{write\_f}!memory.c@{memory.c}}
+\subsubsection{\texorpdfstring{write\_f()}{write\_f()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{structwrite__f}{write\+\_\+f}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structint}{int}}}]{fd,  }\item[{\mbox{\hyperlink{struct_8h_a98d620fb2fb559434fab4f1283139169}{Inode}}}]{inode,  }\item[{\mbox{\hyperlink{structint}{int}}}]{size,  }\item[{char $\ast$}]{text }\end{DoxyParamCaption})}
+
